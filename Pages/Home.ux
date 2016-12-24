@@ -1,0 +1,43 @@
+<Panel ux:Class="Home" >
+	<Router ux:Dependency="router" />
+	<JavaScript File="Home.js" />
+	<DockPanel>
+		<Panel Color="#48c3cb" Dock="Top" Height="48">
+			<Grid Columns="1*,1*,1*">
+				<Image File="../Assets/directionLeft.png" Clicked="{logout}" Alignment="CenterLeft" />
+				<Text TextColor="White" Value="Welcome" Margin="10" FontSize="20" Alignment="Center">
+					<Font File="../Assets/fonts/AlegreyaSans-Bold.otf" />
+				</Text>
+				<Circle Width="40" Height="40"  Fill="#a1f1f6" Margin="10" Alignment="CenterRight" Clicked="{createEvent}">
+	        		<Panel ux:Name="cross">
+	         		 <Rectangle Width="30%" Height="4" Fill="#fff" />
+	          		<Rectangle Height="30%" Width="4" Fill="#fff" />
+	        	  </Panel>
+	      		</Circle>
+	      	</Grid>
+	      </Panel>
+	      <ScrollView>
+	      	<StackPanel>
+	      		<Each Items="{events}">
+	      			<DockPanel HitTestMode="LocalBoundsAndChildren">
+	      				<Rectangle Color="#9c9c9c80" Width="100%" Height="1" Dock="Bottom"  Opacity="0.5"/>
+	      				<Circle ux:Name="goingImage" Width="25" Height="25" Fill="#a1f1f6" Dock="Left" Margin="10,0,0,0" />
+	      				<WhileFalse Value="{isGoing}">
+	      					<Scale Target="goingImage" Factor="0" Duration="0.5" Easing="BounceOut" EasingBack="BounceIn"/>
+	      				</WhileFalse>
+	      				<Grid Clicked="{clicked}" Margin="10"  Rows="1*,auto,1*,1*,1*" HitTestMode="LocalBoundsAndChildren">
+	      					<Text Value="{name}" />
+	      					<Text Value="{venue}" />
+	      					<Text Value="{city}" />
+	      					<Text Value="{time}" />
+	      					<Text Value="{date}" />
+	      					<WhilePressed>
+	      					<Scale Factor="0.05" Easing="QuadraticInOut" Duration="1" />
+	      					</WhilePressed>
+	      				</Grid>
+	     	 		</DockPanel>
+	     	 	</Each>
+	      	</StackPanel>
+	      </ScrollView>
+	  </DockPanel>
+</Panel>

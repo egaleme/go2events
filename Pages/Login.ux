@@ -1,0 +1,36 @@
+<Panel ux:Class="Login" >
+	<Router ux:Dependency="router" />
+	<JavaScript File="Login.js" />
+	<Rectangle ux:Class="Seperator" Width="100%" Height="2"/>
+	<Video Layer="Background" File="../Assets/jack.flv" IsLooping="true" AutoPlay="true" StretchMode="UniformToFill" Opacity="0.8">
+			<Blur Radius="4.75" />
+		</Video>
+	<Grid Rows="1*,1*">
+		<StackPanel Alignment="VerticalCenter">
+			<Text Alignment="Center" FontSize="50" Value="go2Events" TextColor="#000" Opacity="0.7" >
+				<Font File="../Assets/fonts/AlegreyaSans-Bold.otf" />
+			</Text>
+			<Text Alignment="Center" Value="plan your next event" TextColor="#000" Opacity="0.7">
+				<Font File="../Assets/fonts/AlegreyaSans-Bold.otf" />
+			</Text>
+		</StackPanel>
+		<StackPanel Alignment="VerticalCenter" Margin="40">
+			<Text TextColor="Red" Value="{err}" Alignment="Center" Margin="20">
+				<Font File="../Assets/fonts/AlegreyaSans-Bold.otf" />
+			</Text>
+			<TextInput PlaceholderColor="#000000" PlaceholderText="Username" Margin="10" Value="{username}"  TextColor="#000" Opacity="0.6"/>
+			<Seperator Color="#c7cfce" Alignment="Bottom" Opacity="0.7" />
+			<TextInput Value="{password}" PlaceholderColor="#000000" PlaceholderText="Password" Margin="10" IsPassword="true" Opacity="0.6" TextColor="#000" />
+			<Seperator Color="#c7cfce" Alignment="Bottom" Opacity="0.5" />
+			<Panel Margin="10">
+				<Rectangle Width="100" Height="40" CornerRadius="20" Color="#48c3cb">
+					<Text Value="Login" TextColor="White" Alignment="Center">
+					<Font File="../Assets/fonts/AlegreyaSans-Bold.otf" />			
+					</Text>
+					<Clicked Handler="{login}" />
+				</Rectangle>
+			</Panel>
+		</StackPanel>
+	</Grid>
+
+</Panel>

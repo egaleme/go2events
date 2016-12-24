@@ -1,0 +1,32 @@
+<Panel ux:Class="Create">
+	<Router ux:Dependency="router" />
+	<JavaScript File="Create.js" />
+	<DockPanel>
+		<Panel Dock="Top" Color="#48c3cb" Height="48">
+			<Image File="../Assets/directionLeft.png" Clicked="{goBack}" Alignment="CenterLeft" />
+			<Text TextColor="White" Alignment="Center" Value="Create Event" FontSize="30" Margin="10">
+				<Font File="../Assets/fonts/AlegreyaSans-Bold.otf" />
+			</Text>
+		</Panel>
+		<StackPanel>
+				<TextInput PlaceholderColor="#9c9c9c" PlaceholderText="Event name" Margin="10" Value="{name}" />
+				<Rectangle Color="#9c9c9c80" Width="100%" Height="1" Opacity="0.5"/>
+				<TextInput PlaceholderColor="#9c9c9c" PlaceholderText="Event Venue" Margin="10" Value="{venue}" />
+				<Rectangle Color="#9c9c9c80" Width="100%" Height="1" Opacity="0.5"/>
+				<TextInput PlaceholderColor="#9c9c9c" PlaceholderText="Event City" Margin="10" Value="{city}" />
+				<Rectangle Color="#9c9c9c80" Width="100%" Height="1" Opacity="0.5"/>
+				<TextInput PlaceholderColor="#9c9c9c" PlaceholderText="Event Date" Margin="10" Value="{date}" />
+				<Rectangle Color="#9c9c9c80" Width="100%" Height="1" Opacity="0.5"/>
+				<TextInput PlaceholderColor="#9c9c9c" PlaceholderText="Event Time" Margin="10" Value="{time}" />
+				<Rectangle Color="#9c9c9c80" Width="100%" Height="1" Opacity="0.5"/>
+			<Panel Margin="10" HitTestMode="LocalBoundsAndChildren">
+				<Rectangle Width="100" Height="40" CornerRadius="20" Color="#48c3cb">
+					<Text Value="Add" TextColor="White" Alignment="Center">
+					<Font File="../Assets/fonts/AlegreyaSans-Bold.otf" />			
+					</Text>
+					<Clicked Handler="{createEvent}" />
+				</Rectangle>
+			</Panel>
+		</StackPanel>
+	</DockPanel>
+</Panel>

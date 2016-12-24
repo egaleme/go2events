@@ -1,0 +1,10 @@
+<App Background="#ffffff80">
+	<Router ux:Name="router" />
+	<ClientPanel>
+		<Navigator DefaultTemplate="login">
+			<Login ux:Template="login" router="router" />
+			<Home ux:Template="home" router="router" />
+			<Create ux:Template="create" router="router" />
+		</Navigator>
+	</ClientPanel>
+</App>
