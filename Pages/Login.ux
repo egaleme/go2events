@@ -2,7 +2,7 @@
 	<Router ux:Dependency="router" />
 	<JavaScript File="Login.js" />
 	<Rectangle ux:Class="Seperator" Width="100%" Height="2"/>
-	<Video Layer="Background" File="../Assets/jack.flv" IsLooping="true" AutoPlay="true" StretchMode="UniformToFill" Opacity="0.8">
+	<Video Layer="Background" Volume="0" File="../Assets/jack.flv" IsLooping="true" AutoPlay="true" StretchMode="UniformToFill" Opacity="0.8">
 			<Blur Radius="4.75" />
 		</Video>
 	<Grid Rows="1*,1*">
@@ -25,7 +25,7 @@
 			<Panel Margin="10">
 				<Rectangle Width="100" Height="40" CornerRadius="20" Color="#48c3cb">
 					<Text Value="Login" TextColor="White" Alignment="Center">
-					<Font File="../Assets/fonts/AlegreyaSans-Bold.otf" />			
+					<Font File="../Assets/fonts/AlegreyaSans-Bold.otf" />
 					</Text>
 					<Clicked Handler="{login}" />
 				</Rectangle>

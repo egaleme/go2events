@@ -35,6 +35,17 @@
 	      					<Scale Factor="0.05" Easing="QuadraticInOut" Duration="1" />
 	      					</WhilePressed>
 	      				</Grid>
+								<LayoutAnimation>
+							<Move RelativeTo="LayoutChange" Y="1" Duration="0.8" Easing="ElasticIn" />
+						</LayoutAnimation>
+
+						<AddingAnimation>
+							<Move RelativeTo="Size" X="1" Duration="0.3" Easing="CircularIn" />
+						</AddingAnimation>
+
+						<RemovingAnimation>
+							<Move RelativeTo="Size" X="-1" Duration="0.4" Easing="CircularOut" />
+						</RemovingAnimation>
 	     	 		</DockPanel>
 	     	 	</Each>
 	      	</StackPanel>

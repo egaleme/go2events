@@ -11,7 +11,7 @@ function getEvents(poster) {
 	then(function(data) {
 		store.replaceAll(data)
 		store.forEach(function(d) {
-			d.isGoing = Observable(false)	
+			d.isGoing = Observable(false)
 			events.add(d)
 	})
 	}).
@@ -19,12 +19,12 @@ function getEvents(poster) {
 		console.log("can not load items :" + error)
 	})
 
-	
+
 }
 
 
 function postEvent(name, venue, city, date, time) {
-	isGoing = Observable(false)
+var	isGoing = Observable(false)
 	events.add({name: name, venue: venue, city: city, date: date, time: time, isGoing: isGoing, poster: user.value})
 }
 
